@@ -7,7 +7,8 @@ include("solution.jl")
 export SNDNetwork,
        is_valid_network_file,
        load_network,
-       load_solution
+       load_solution,
+       get_link_configuration
 
 function Base.show(io::IO, network::SNDNetwork)
     println(io, "SNDNetwork")

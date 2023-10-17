@@ -31,6 +31,15 @@ struct SNDSolution
     link_configuration_fields
 end
 
+function get_link_configuration(solution::SNDSolution, link_id::String)
+    for i in 1:length(solution.link_configurations)
+        if solution.link_configurations[i].link_id == link_id
+            return solution.link_configurations[i]
+        end
+    end
+    return SNDLinkConfiguration(link_id, [])
+end
+
 function parse_fields(line::String)
     fields = remove_special_characters(line)
     fields = replace(fields, "  "=>" ")
