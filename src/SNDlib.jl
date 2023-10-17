@@ -7,6 +7,7 @@ include("solution.jl")
 export SNDNetwork,
        is_valid_network_file,
        load_network,
+       SNDSolution,
        load_solution,
        get_link_configuration
 
