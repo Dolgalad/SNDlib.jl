@@ -2,10 +2,12 @@ module SNDlib
 
 include("network.jl")
 include("download.jl")
+include("solution.jl")
 
 export SNDNetwork,
        is_valid_network_file,
-       load_network
+       load_network,
+       load_solution
 
 function Base.show(io::IO, network::SNDNetwork)
     println(io, "SNDNetwork")
